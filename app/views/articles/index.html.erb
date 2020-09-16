@@ -1,0 +1,18 @@
+<h1>My article</h1>
+
+<ol>
+  <% @articles.each do |article| %>
+    <li class="field">
+      <div>
+      <%= link_to "#{article.title}", article_path(article) %>
+      </div>
+      <div>
+      <%= "#{article.content}" %>
+      </div>
+    </li>
+  <% end %>
+</ol>
+
+<p>
+  <%= link_to 'Add Article', new_article_path %>
+</p>
